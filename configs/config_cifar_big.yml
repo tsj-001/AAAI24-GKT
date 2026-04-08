@@ -1,0 +1,37 @@
+# data
+workers: 4
+
+# info
+num_classes: 100
+image_size: 160
+topk: [1, 5]
+start_epoch: 0
+epochs: 500
+print_freq: 100
+batch_size: 64
+#batch_size: 256
+
+# optimizer
+optimizer: sgd
+momentum: 0.9
+weight_decay: 0.00003
+nesterov: True
+
+# lr
+lr: 0.05
+#lr: 0.1
+lr_scheduler: cosine
+
+# model
+model: wideresnet
+depth: 28
+widen_factor: 10
+max_width: 1.0
+min_width: 0.8
+num_subnet: 3
+resos: [160, 144, 128]
+reset_parameters: True
+resume: ''
+log_dir: logs/wideresnet28-10_randwidth/
+test_only: False
+pretrained: ''
